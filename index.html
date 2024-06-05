@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>watchudoinghere?</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fcfefc;
+            height: 100vh;
+            margin: 0;
+            font-family: "Press Start 2P", system-ui;
+        }
+        .center-container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .dancingPaimon {
+            width: 50%; 
+            max-width: 300px; 
+            height: auto; 
+            display: none; 
+        }
+        button {
+            background: none;
+            border: none;
+        }
+        button:focus {
+            outline: none;
+        }
+        .startBtn {
+            height: 70px;
+        }
+        #paimonTxt {
+            display: none;
+            font-size: 12px; 
+        }
+        footer {
+            font-size: 10px;
+            display: none; 
+        }
+        span {
+            color: #FFC0CB;
+            text-shadow: -1px -1px 0 #161616,  
+                          1px -1px 0 #161616,
+                         -1px  1px 0 #161616,
+                          1px  1px 0 #161616;
+        }
+    </style>
+</head>
+<body>
+    <div class="center-container">
+        <img id="dancingPaimon" class="dancingPaimon" src="/2221b4a744b0452751e812f10e93ee67.gif" alt="Dancing Paimon">
+        <button id="showButton"><img class="startBtn" src="/ezgif.com-crop.jpg" alt="Start Button" onclick="showGif()"></button>
+        <p id="paimonTxt" onclick="showTxt()">a <span>dancing paimon</span> to make your day a little brighter!</p>
+        <audio id="backgroundMusic" controls loop style="display: none;">
+            <source src="/Pumped Up Kicks Foster the people sped upnightcore (1) (mp3cut.net).mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <script>
+        function showGif() {
+            document.getElementById("dancingPaimon").style.display = "block";
+            document.getElementById("showButton").style.display = "none";
+            document.getElementById("paimonTxt").style.display = "block";
+            document.getElementById("backgroundMusic").play();
+            document.getElementById("footer").style.display = "block"; 
+        }
+    </script>
+    <footer id="footer" class="text-center">made with &#129505; by <a href="https://github.com/naomitng">naomitng</a></footer>
+</body>
+</html>
